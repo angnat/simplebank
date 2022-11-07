@@ -1,5 +1,5 @@
 postgres:
-	docker run --name postgres14 -p 5432:5432 -e POSTGRES_PASSWORD=password.1 -d postgres:14-alpine
+	docker run --name postgres14 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=password.1 -d postgres:14.5-alpine
 stopPostgres:
 	docker stop postgres14; docker rm postgres14
 createdb:
